@@ -45,10 +45,29 @@
         }
 
         /* Outline for checking */
-        *{
+        /* *{
           outline: 1px solid green;
+        } */
+
+        input::placeholder{
+          font-size: 16px;
+          font-weight: 500;
+          color: rgb(160, 160, 160);
         }
 
+        textarea{
+          resize: none;
+        }
+
+        textarea::-webkit-resizer{
+          display: none;
+        }
+
+        textarea::placeholder{
+          font-size: 16px;
+          font-weight: 500;
+          color: rgb(160, 160, 160);
+        }
     </style>
 </head>
 <body class="font-manrope h-screen w-full bg-less-white">
@@ -73,7 +92,7 @@
                     </div>
                     <ul
                       tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      class="menu menu-sm dropdown-content bg-black-light rounded-box z-[1] mt-3 w-52 p-2 shadow">
                       <li><a href="#Home" class="text-[16px] font-extrabold">Home</a></li>
                       <li><a href="#Services" class="text-[16px] font-normal">Services</a></li>
                       <li><a href="#Portfolio" class="text-[16px] font-normal">Portfolio</a></li>
@@ -219,7 +238,51 @@
           </div>
         </div>
       </section>
+      <section class="bg-[url('assets/bg.jpg');] bg-no-repeat bg-cover flex justify-center items-center " id="Contact">
+        <div class="flex flex-col justify-center items-center my-[100px] gap-[16px]">
+          <div class="w-[165px] h-[36px] bg-light-green flex justify-center items-center rounded-2xl gap-2 -mb-2"> 
+            <svg class="w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#494949" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
+            <p class="text-charcoal text-[16px] font-bold">Let’s Connect</p>
+          </div>
+          <h1 class="text-[40px] w-[560px] font-extrabold text-black-b text-center mb-2">Our Latest Portfolio</h1>
+          <p class="font-medium text-[16px] w-[678px] text-charcoal text-center mb-8">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+          <form action="" class="flex flex-col justify-center items-center gap-6">
+            <div class="flex flex-row justify-center items-center gap-6">
+              <input type="text" placeholder="First Name*" class="w-[473px] p-[21px] rounded-[64px]" required>
+              <input type="text" placeholder="Last Name*" class="w-[473px] p-[21px] rounded-[64px]" required>
+            </div>
+            <div class="flex flex-row justify-center items-center gap-6">
+              <input type="text" placeholder="Phone Number*" class="w-[473px] p-[21px] rounded-[64px]" required>
+              <input type="text" placeholder="Email Address*" class="w-[473px] p-[21px] rounded-[64px]" required>
+            </div>
+            <textarea type="text" placeholder="Write your message here" class="w-[970px] h-[240px] p-[21px] rounded-[32px]"></textarea>
+            <button type="submit" class="mt-2 bg-green text-black-light w-[970px] h-[56px] flex justify-center items-center gap-2 text-[20px] font-extrabold rounded-[32px]">Send Mail <div class="w-[32px] h-[32px] bg-black-light flex justify-center items-center rounded-2xl">
+              <svg class="-rotate-[50deg] w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
+            </div></button>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="bg-black-light flex justify-center items-center">
+      <div class="flex flex-col my-[100px] justify-center items-center">
+        <div class="flex flex-row gap-2 mb-[16px] justify-center items-center">
+          <div class="w-[32px] h-[32px] bg-green flex justify-center items-center rounded-2xl">
+            <svg class="-rotate-[50deg] w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#212121" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
+          </div>
+          <a class="font-extrabold text-[32px] ml-[8px] text-white cursor-pointer" href="#">Rinterio</a>
+        </div>
+        <p class="font-medium text-[16px] w-[678px] text-charcoal-light text-center">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+        <ul class="flex flex-row gap-[120px] text-lesser-white my-[48px]">
+          <li><a href="#Home" class="text-[16px] font-extrabold">Home</a></li>
+          <li><a href="#Services" class="text-[16px] font-normal">Services</a></li>
+          <li><a href="#Portfolio" class="text-[16px] font-normal">Portfolio</a></li>
+          <li><a href="#Blogs" class="text-[16px] font-normal">Blogs</a></li>
+          <li><a href="#Contact-Us" class="text-[16px] font-normal">Contact Us</a></li>
+        </ul>
+        <button class="bg-green text-black-light w-[211px] h-[56px] flex justify-center items-center gap-2 text-[20px] font-extrabold rounded-[32px]">Book Consult <div class="w-[32px] h-[32px] bg-black-light flex justify-center items-center rounded-2xl">
+          <svg class="-rotate-[50deg] w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
+        </div></button>
+      </div>
+    </footer>
 </body>
 </html>
