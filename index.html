@@ -45,9 +45,9 @@
         }
 
         /* Outline for checking */
-        /* *{
+        *{
           outline: 1px solid green;
-        } */
+        }
 
         input::placeholder{
           font-size: 16px;
@@ -73,33 +73,8 @@
 <body class="font-manrope h-screen w-full bg-less-white">
     <header class="flex justify-center items-center flex-col bg-gradient-to-b from-less-white to-white" id="Home">
         <nav class="pt-[15px] flex justify-center items-center">
-            <div class="navbar bg-less-white flex gap-[112px] justify-center items-center">
+            <div class="navbar bg-less-white flex lg:gap-[112px] gap-[138px] justify-center items-center">
                 <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16" />
-                      </svg>
-                    </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-black-light rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a href="#Home" class="text-[16px] font-extrabold">Home</a></li>
-                      <li><a href="#Services" class="text-[16px] font-normal">Services</a></li>
-                      <li><a href="#Portfolio" class="text-[16px] font-normal">Portfolio</a></li>
-                      <li><a href="#Blogs" class="text-[16px] font-normal">Blogs</a></li>
-                      <li><a href="#Contact-Us" class="text-[16px] font-normal">Contact Us</a></li>
-                    </ul>
-                  </div>
                   <div class="w-[32px] h-[32px] bg-green flex justify-center items-center rounded-2xl">
                     <svg class="-rotate-[50deg] w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#212121" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
                   </div>
@@ -114,7 +89,24 @@
                     <li><a href="#Contact-Us" class="text-[16px] font-normal">Contact Us</a></li>
                   </ul>
                 </div>
-                <div class="navbar-end flex gap-[16px]">
+                <div class="navbar-end lg:hidden">
+                  <div class="dropdown lg:hidden">
+                    <div tabindex="0" role="button" class="w-[48px] h-[48px] bg-white rounded-3xl lg:hidden flex justify-center items-center border border-charcoal-lighter">
+                      <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#737373" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-black-light border border-green text-white rounded-box z-[1] mt-3 w-52 p-2 shadow absolute -left-[150px]">
+                      <li><a href="#Home" class="text-[16px] font-extrabold">Home</a></li>
+                      <li><a href="#Services" class="text-[16px] font-normal">Services</a></li>
+                      <li><a href="#Portfolio" class="text-[16px] font-normal">Portfolio</a></li>
+                      <li><a href="#Blogs" class="text-[16px] font-normal">Blogs</a></li>
+                      <li><a href="#Contact-Us" class="text-[16px] font-normal">Contact Us</a></li>
+                    </ul>
+                    
+                  </div>
+                </div>
+                <div class="navbar-end hidden lg:flex gap-[16px]">
                   <div class="w-[48px] h-[48px] bg-white rounded-3xl flex justify-center items-center border border-charcoal-lighter"><a href="#">
                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#737373" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
                   </a></div>
@@ -128,138 +120,183 @@
               </div>
         </nav>
         <!-- Banner Part -->
-        <div class="flex flex-col justify-center items-center gap-6">
-          <img class="w-[571px] h-[350px] mt-[56px]" src="assets/banner.png" alt="An illustration of a house">
-          <h1 class="w-[1084px] text-[64px] font-extrabold text-black-b text-center leading-[87px]">A barn house of this design has a striking appearance</h1>
-          <p class="w-[972px] font-medium text-[16px] text-center text-charcoal">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
-          <button class="mt-2 mb-[120px] flex justify-center items-center gap-2 text-[20px] font-bold w-[210px] h-[56px] rounded-[32px] border border-green bg-light-green">View Details <div class="w-[32px] h-[32px] bg-green flex justify-center items-center rounded-2xl">
+        <div class="flex flex-col justify-center items-center lg:gap-6 gap-[16px]">
+          <img class="lg:w-[571px] w-[260px] h-[160px] lg:h-[350px] lg:mt-[56px] mt-[32px]" src="assets/banner.png" alt="An illustration of a house">
+          <h1 class="lg:w-[1084px] w-[335px] lg:text-[64px] text-[28px] font-extrabold text-black-b text-center lg:leading-[87px] leading-[32px]">A barn house of this design has a striking appearance</h1>
+          <p class="lg:w-[972px] w-[335px] font-medium lg:text-[16px] text-[14px] text-center text-charcoal">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+          <button class="mt-[5px] lg:mt-2 lg:mb-[120px] mb-[40px] flex justify-center items-center gap-2 text-[20px] font-bold lg:w-[210px] w-[335px]  h-[56px] rounded-[32px] border border-green bg-light-green">View Details <div class="w-[32px] h-[32px] bg-green flex justify-center items-center rounded-2xl">
             <svg class="-rotate-[50deg] w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#212121" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
           </div></button>
         </div>
     </header>
     <main>
-      <section id="About" class="flex flex-col lg:flex-row bg-lesser-white justify-center items-center gap-[37px]">
-        <div class="w-[573px] h-[545px] relative flex flex-col gap-6">
-          <img src="assets/Vector.png" alt="arrow" class="absolute -top-[75px] -left-[55px] py-[20px]">
-          <div class="w-[128px] h-[36px] bg-white flex justify-center items-center rounded-2xl gap-2 -mb-2"> 
+      <section id="About" class="flex flex-col lg:flex-row bg-lesser-white justify-center items-center gap-[24px] lg:gap-[37px]">
+        <div class="lg:w-[573px] w-[335px] lg:h-[545px] lg:justify-start lg:items-start justify-center items-center relative flex flex-col lg:gap-6 gap-[16px]">
+          <img src="assets/Vector.png" alt="arrow" class="lg:block absolute hidden -top-[75px] -left-[55px] py-[20px]">
+          <div class="w-[128px] h-[36px] bg-white flex justify-center items-center rounded-2xl gap-2 lg:-mb-2 mt-[31px] lg:mt-[0px]"> 
             <svg class="w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#494949" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
             <p class="text-charcoal text-[16px] font-bold">About Us</p>
           </div>
-          <h1 class="text-[40px] w-[560px] font-extrabold text-black-b">We design thoughtful, liveable spaces</h1>
-          <p class="font-medium text-[16px] text-charcoal">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
-          <div class="w-[512px] h-[126px] rounded-[16px] flex justify-left items-center bg-white gap-6 p-6">
-            <img src="assets/commercial.png" alt="Commercial">
+          <h1 class="lg:text-[40px] text-[24px] lg:w-[560px] w-[304px] font-extrabold text-black-b lg:text-left text-center">We design thoughtful, liveable spaces</h1>
+          <p class="font-medium lg:text-[16px] text-[14px] text-center lg:text-left text-charcoal mb-[8px] lg:mb-[0px]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+          <div class="lg:w-[512px] lg:h-[126px] w-[335px] h-[154px] rounded-[16px] flex lg:items-center bg-white gap-6 p-6">
+            <img src="assets/commercial.png" alt="Commercial" class="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px]">
             <div class="flex flex-col gap-[10px]">
-              <h2 class="text-[20px] text-charcoal font-extrabold">Commercial</h2>
-              <p class="font-medium text-[16px] text-left w-[320px] text-charcoal-light">The barn house captivates with its blend of rustic charm and modern.</p>
+              <h2 class="lg:text-[20px] text-[16px] text-charcoal font-extrabold">Commercial</h2>
+              <p class="font-medium text-[16px] text-left lg:w-[320px] w-[235px] text-charcoal-light">The barn house captivates with its blend of rustic charm and modern.</p>
             </div>
           </div>
-          <div class="w-[512px] h-[126px] rounded-[16px] flex items-center bg-white gap-6 p-6">
-            <img src="assets/residential.png" alt="Residential">
+          <div class="lg:w-[512px] lg:h-[126px] w-[335px] h-[154px] rounded-[16px] flex lg:items-center bg-white gap-6 p-6">
+            <img src="assets/residential.png" alt="Residential" class="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px]">
             <div class="flex flex-col gap-[10px]">
-              <h2 class="text-[20px] text-charcoal font-extrabold">Residential</h2>
-              <p class="font-medium text-[16px] text-left w-[320px] text-charcoal-light">The barn house captivates with its blend of rustic charm and modern.</p>
+              <h2 class="lg:text-[20px] text-[16px] text-charcoal font-extrabold">Residential</h2>
+              <p class="font-medium text-[16px] text-left lg:w-[320px] w-[235px] text-charcoal-light">The barn house captivates with its blend of rustic charm and modern.</p>
             </div>
           </div>
         </div>
-        <div class="my-[100px] w-[573px] h-[545px] bg-[url('assets/Rectangle.png')] bg-cover rounded-2xl"></div>
+        <div class="lg:my-[100px] mb-[51px] lg:w-[573px] w-[335px] lg:h-[545px] h-[223px] bg-no-repeat bg-center bg-[url('assets/Rectangle.png')] bg-cover rounded-2xl"></div>
       </section>
-      <section class="flex flex-col bg-lesser-white justify-center items-center gap-[16px] pb-[108px]" id="how-we-work">
-        <div class="w-[165px] h-[36px] bg-white flex justify-center items-center rounded-2xl gap-2 -mb-2"> 
+      <section class="flex flex-col bg-lesser-white justify-center items-center gap-[16px] lg:pb-[108px] pb-[38px]" id="how-we-work">
+        <div class="w-[165px] h-[36px] bg-white flex justify-center items-center rounded-2xl gap-2"> 
           <svg class="w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#494949" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
           <p class="text-charcoal text-[16px] font-bold">How we work</p>
         </div>
-        <h1 class="text-[40px] w-[560px] font-extrabold text-black-b text-center mb-2">Our Works Process</h1>
-        <p class="font-medium text-[16px] w-[678px] text-charcoal text-center mb-8">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
-        <div class="flex flex-row gap-6">
-          <div class="flex flex-col gap-[10px] w-[275px] h-[220px] rounded-[16px] justify-center items-start bg-pink">
+        <h1 class="lg:text-[40px] text-[24px] lg:w-[560px]  w-[335px] font-extrabold text-black-b text-center lg:mb-2">Our Works Process</h1>
+        <p class="font-medium lg:text-[16px] text-[14px] lg:w-[678px] w-[335px] text-charcoal text-center lg:mb-[16px] mb-[8px]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+        <div class="flex lg:flex-row flex-col lg:gap-6 gap-[16px]">
+          <div class="flex flex-col gap-[10px] lg:w-[275px] w-[335px] lg:h-[220px] h-[194px] rounded-[16px] justify-center items-start bg-pink">
             <img src="assets/concept.png" alt="Concept" class="mx-6">
             <h3 class="font-extrabold text-[20px] text-black-light mx-6">Concept</h3>
-            <p class="w-[227px] text-[16px] text-left font-medium text-charcoal mx-6">The barn house captivates with its blend of rustic charm and modern.</p>
+            <p class="lg:w-[227px] w-[287px] text-[16px] text-left font-medium text-charcoal mx-6">The barn house captivates with its blend of rustic charm and modern.</p>
           </div>
-          <div class="flex flex-col gap-[10px] w-[275px] h-[220px] rounded-[16px] justify-center items-start bg-yellow">
+          <div class="flex flex-col gap-[10px] lg:w-[275px] w-[335px] lg:h-[220px] h-[194px] rounded-[16px] justify-center items-start bg-yellow">
             <img src="assets/flow-chart.png" alt="Concept" class="mx-6">
             <h3 class="font-extrabold text-[20px] text-black-light mx-6">Design Process</h3>
-            <p class="w-[227px] text-[16px] text-left font-medium text-charcoal mx-6">The barn house captivates with its blend of rustic charm and modern.</p>
+            <p class="lg:w-[227px] w-[287px] text-[16px] text-left font-medium text-charcoal mx-6">The barn house captivates with its blend of rustic charm and modern.</p>
           </div>
-          <div class="flex flex-col gap-[10px] w-[275px] h-[220px] rounded-[16px] justify-center items-start bg-lighter-green">
+          <div class="flex flex-col gap-[10px] lg:w-[275px] w-[335px] lg:h-[220px] h-[194px] rounded-[16px] justify-center items-start bg-lighter-green">
             <img src="assets/vision.png" alt="Concept" class="mx-6">
             <h3 class="font-extrabold text-[20px] text-black-light mx-6">Supervision</h3>
-            <p class="w-[227px] text-[16px] text-left font-medium text-charcoal mx-6">The barn house captivates with its blend of rustic charm and modern.</p>
+            <p class="lg:w-[227px] w-[287px] text-[16px] text-left font-medium text-charcoal mx-6">The barn house captivates with its blend of rustic charm and modern.</p>
           </div>
-          <div class="flex flex-col gap-[10px] w-[275px] h-[220px] rounded-[16px] justify-center items-start bg-blue">
+          <div class="flex flex-col gap-[10px] lg:w-[275px] w-[335px] lg:h-[220px] h-[194px] rounded-[16px] justify-center items-start bg-blue">
             <img src="assets/budget-planning.png" alt="Concept" class="mx-6">
             <h3 class="font-extrabold text-[20px] text-black-light mx-6">Budget Planning</h3>
-            <p class="w-[227px] text-[16px] text-left font-medium text-charcoal mx-6">The barn house captivates with its blend of rustic charm and modern.</p>
+            <p class="lg:w-[227px] w-[287px] text-[16px] text-left font-medium text-charcoal mx-6">The barn house captivates with its blend of rustic charm and modern.</p>
           </div>
         </div>
       </section>
-      <section id="Explore-our-Latest-works" class="py-[100px] flex flex-col justify-center items-center gap-[16px]">
-        <div class="w-[246px] h-[36px] bg-light-green flex justify-center items-center rounded-2xl gap-2 -mb-2"> 
+      <section id="Explore-our-Latest-works" class="lg:py-[100px] py-[38px] flex flex-col justify-center items-center gap-[16px] lg:bg-less-white bg-lesser-white">
+        <div class="w-[246px] h-[36px] bg-light-green flex justify-center items-center rounded-2xl gap-2"> 
           <svg class="w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#494949" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
           <p class="text-charcoal text-[16px] font-bold">Explore our Latest works</p>
         </div>
-        <h1 class="text-[40px] w-[560px] font-extrabold text-black-b text-center mb-2">Our Latest Portfolio</h1>
-        <p class="font-medium text-[16px] w-[678px] text-charcoal text-center mb-8">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
-        <div class="mb-[24px] flex lg:flex-row gap-6 flex-wrap w-[1190px] justify-center items-center">
-          <div class="flex gap-6 justify-center items-center w-[772px] h-[223px] p-6 border rounded-[16px] border-charcoal-lighter">
-            <img src="assets/img1.png">
-            <div class="flex flex-col gap-[16px] items-start justify-center">
-              <h2 class="text-[24px] text-charcoal font-extrabold">Commercial</h2>
-              <p class="font-medium text-[16px] text-left w-[440px] text-charcoal-light">The barn house captivates with its blend of rustic charm and modern. The barn house captivates with its blend of rustic charm and modern .</p>
+        <h1 class="lg:text-[40px] text-[24px] lg:w-[560px] w-[335px] font-extrabold text-black-b text-center lg:mb-2">Our Latest Portfolio</h1>
+        <p class="font-medium lg:text-[16px] text-[14px] lg:w-[678px] w-[335px] text-charcoal text-center lg:mb-[16px]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+        <div class="lg:mb-[24px] mb-[16px] flex lg:flex-row flex-col gap-6 flex-wrap lg:w-[1190px] w-[335px] justify-center items-center">
+          <div class="flex lg:flex-row flex-col gap-6 lg:justify-center lg:items-center items-start justify-center lg:w-[772px] lg:h-[227px] h-[462px]  p-6 border rounded-[16px] border-charcoal-lighter lg:bg-less-white bg-white">
+            <img src="assets/img1.png" class="lg:w-[260px] lg:h-[175px] w-[287px] h-[191px] bg-cover">
+            <div class="flex flex-col gap-[16px] items-start justify-cente">
+              <h2 class="lg:text-[24px] text-[20px] text-charcoal font-extrabold">Commercial</h2>
+              <p class="font-medium text-[16px] text-left lg:w-[440px] w-[287px] text-charcoal-light">The barn house captivates with its blend of rustic charm and modern. The barn house captivates with its blend of rustic charm and modern .</p>
               <button class="flex items-start gap-[10px] text-[20px] font-bold w-[210px] h-[30px] text-left mt-[8px]">View Details <div class="w-[32px] h-[32px] bg-green flex justify-center items-center rounded-2xl">
                 <svg class="-rotate-[50deg] w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#212121" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
               </div></button>
             </div>
           </div>
-          <div class="flex gap-6 justify-center items-center w-[374px] h-[223px] p-6 border rounded-[16px] border-charcoal-lighter">
-            <img src="assets/img2.png">
+          <div class="flex gap-6 justify-center items-center lg:w-[374px] lg:h-[227px] h-[237px] w-[335px] p-6 border rounded-[16px] border-charcoal-lighter  lg:bg-less-white bg-white">
+            <img src="assets/img2.png" class="lg:w-[326px] lg:h-[179px] w-[295px] h-[197px] bg-cover">
           </div>
-          <div class="w-full h-[223px] flex flex-row-reverse lg:flex-row gap-6 justify-center items-center">
-            <div class="flex gap-6 justify-center items-center w-[274px] h-[223px] p-6 border rounded-[16px] border-charcoal-lighter lg:hidden">
-              <img src="assets/img5.png">
+          <div class="w-full lg:h-[223px] h-full flex flex-col-reverse lg:flex-row gap-6 justify-center items-center lg:bg-less-white bg-white">
+            <div class="flex gap-6 justify-center items-center lg:w-[274px] lg:h-[227px] w-[335px] h-[219px] p-6 border rounded-[16px] border-charcoal-lighter lg:hidden">
+              <img src="assets/img5.png" class="lg:w-[226px] lg:h-[179px] w-[295px] h-[179px] bg-cover">
             </div>
-            <div class="flex gap-6 justify-center items-center w-[274px] h-[223px] p-6 border rounded-[16px] border-charcoal-lighter">
-              <img src="assets/img3.png">
+            <div class="flex gap-6 justify-center items-center lg:w-[274px] lg:h-[227px] w-[335px] h-[219px] p-6 border rounded-[16px] border-charcoal-lighter lg:bg-less-white bg-white">
+              <img src="assets/img3.png" class="lg:w-[226px] lg:h-[179px] w-[295px] h-[179px] bg-cover">
             </div>
-            <div class="flex gap-6 justify-center items-center w-[573px] h-[223px] p-6 border rounded-[16px] border-charcoal-lighter">
-              <img src="assets/img4.png">
-              <div class="flex flex-col gap-[16px] items-start justify-center">
-                <h2 class="text-[24px] text-charcoal font-extrabold">Commercial</h2>
-                <p class="font-medium text-[16px] text-left w-[241px] text-charcoal-light">The barn house captivates with its blend of rustic charm and modern.</p>
+            <div class="flex lg:flex-row flex-col gap-6 justify-center lg:items-center items-start lg:w-[573px] lg:h-[227px] w-[335px] h-[410px] p-6 border rounded-[16px] border-charcoal-lighter lg:bg-less-white bg-white">
+              <img src="assets/img4.png" class="lg:w-[260px] lg:h-[179px] w-[295px] h-[179px] bg-cover">
+              <div class="flex flex-col gap-[16px] items-start justify-center lg:bg-less-white bg-white">
+                <h2 class="lg:text-[24px] text-[20px] text-charcoal font-extrabold">Commercial</h2>
+                <p class="font-medium text-[16px] text-left lg:w-[241px] w-[287px] text-charcoal-light">The barn house captivates with its blend of rustic charm and modern.</p>
                 <button class="flex items-start gap-[10px] text-[20px] font-bold w-[210px] h-[30px] text-left mt-[8px]">View Details <div class="w-[32px] h-[32px] bg-green flex justify-center items-center rounded-2xl">
                   <svg class="-rotate-[50deg] w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#212121" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
                 </div></button>
               </div>
             </div>
-            <div class="flex gap-6 justify-center items-center w-[274px] h-[223px] p-6 border rounded-[16px] border-charcoal-lighter">
-              <img src="assets/img5.png">
+            <div class="flex gap-6 justify-center items-center lg:w-[274px] lg:h-[227px] w-[335px] h-[219px] p-6 border rounded-[16px] border-charcoal-lighter lg:bg-less-white bg-white">
+              <img src="assets/img5.png" class="lg:w-[226px] lg:h-[179px] w-[295px] h-[179px] bg-cover">
             </div>
           </div>
         </div>
       </section>
       <section class="bg-[url('assets/bg.jpg');] bg-no-repeat bg-cover flex justify-center items-center " id="Contact">
-        <div class="flex flex-col justify-center items-center my-[100px] gap-[16px]">
-          <div class="w-[165px] h-[36px] bg-light-green flex justify-center items-center rounded-2xl gap-2 -mb-2"> 
+        <div class="flex flex-col justify-center items-center lg:my-[100px] my-[38px] gap-[16px]">
+          <div class="w-[165px] h-[36px] bg-light-green flex justify-center items-center rounded-2xl gap-2"> 
             <svg class="w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#494949" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
             <p class="text-charcoal text-[16px] font-bold">Let’s Connect</p>
           </div>
-          <h1 class="text-[40px] w-[560px] font-extrabold text-black-b text-center mb-2">Our Latest Portfolio</h1>
-          <p class="font-medium text-[16px] w-[678px] text-charcoal text-center mb-8">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+          <h1 class="lg:text-[40px] text-[24px] lg:w-[560px] w-[241px] font-extrabold text-black-b text-center lg:mb-2">Our Latest Portfolio</h1>
+          <p class="font-medium lg:text-[16px] text-[14px] lg:w-[678px] w-[327px] text-charcoal text-center lg:mb-[16px] mb-[8px]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
           <form action="" class="flex flex-col justify-center items-center gap-6">
-            <div class="flex flex-row justify-center items-center gap-6">
-              <input type="text" placeholder="First Name*" class="w-[473px] p-[21px] rounded-[64px]" required>
-              <input type="text" placeholder="Last Name*" class="w-[473px] p-[21px] rounded-[64px]" required>
+            <div class="flex lg:flex-row flex-col justify-center items-center lg:gap-6 gap-[20px]">
+              <input type="text" placeholder="First Name*" class="lg:w-[473px] w-[327px] lg:p-[21px] p-[17px] rounded-[64px]" required>
+              <input type="text" placeholder="Last Name*" class="lg:w-[473px] w-[327px] lg:p-[21px] p-[17px] rounded-[64px]" required>
             </div>
-            <div class="flex flex-row justify-center items-center gap-6">
-              <input type="text" placeholder="Phone Number*" class="w-[473px] p-[21px] rounded-[64px]" required>
-              <input type="text" placeholder="Email Address*" class="w-[473px] p-[21px] rounded-[64px]" required>
+            <div class="flex lg:flex-row flex-col justify-center items-center lg:gap-6 gap-[20px]">
+              <input type="text" placeholder="Phone Number*" class="lg:w-[473px] w-[327px] lg:p-[21px] p-[17px] rounded-[64px]" required>
+              <input type="text" placeholder="Email Address*" class="lg:w-[473px] w-[327px] lg:p-[21px] p-[17px] rounded-[64px]" required>
             </div>
-            <textarea type="text" placeholder="Write your message here" class="w-[970px] h-[240px] p-[21px] rounded-[32px]"></textarea>
-            <button type="submit" class="mt-2 bg-green text-black-light w-[970px] h-[56px] flex justify-center items-center gap-2 text-[20px] font-extrabold rounded-[32px]">Send Mail <div class="w-[32px] h-[32px] bg-black-light flex justify-center items-center rounded-2xl">
+            <textarea type="text" placeholder="Write your message here" class="lg:w-[970px] w-[327px] h-[240px] lg:p-[21px] p-[17px] rounded-[32px]"></textarea>
+            <button type="submit" class="mt-2 bg-green text-black-light lg:w-[970px] w-[327px] h-[56px] flex justify-center items-center gap-2 text-[20px] font-extrabold rounded-[32px]">Send Mail <div class="w-[32px] h-[32px] bg-black-light flex justify-center items-center rounded-2xl">
               <svg class="-rotate-[50deg] w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
             </div></button>
           </form>
+        </div>
+      </section>
+      <section id="faq" class="flex flex-col bg-lesser-white gap-[16px] lg:py-[100px] py-[38px] justify-center items-center">
+        <div class="w-[170px] h-[36px] bg-white flex justify-center items-center rounded-2xl gap-2"> 
+          <svg class="w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#494949" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
+          <p class="text-charcoal text-[16px] font-bold">View Our FAQs</p>
+        </div>
+        <h1 class="lg:text-[40px] text-[24px] lg:w-[560px] w-[327px] font-extrabold text-black-b text-center lg:mb-2">Frequently Asked Questions</h1>
+        <p class="font-medium lg:text-[16px] text-[14px] lg:w-[678px] w-[327px] text-charcoal text-center lg:mb-[16px] mb-[8px]">Get answers to the most common questions about our design process, services, and what to expect when working with Rinterio.</p>
+        <div class="flex justify-center items-center flex-col gap-6">
+          <div class="collapse collapse-plus bg-white">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-medium lg:w-[620px] w-[375px] font-semibold text-black-b">What types of projects does Rinterio specialize in?</div>
+            <div class="collapse-content">
+              <p class="font-medium lg:text-[18px] text-[16px] text-charcoal lg:w-[600px] w-[350px] text-justify">Rinterio excels in designing both residential and commercial spaces, offering innovative solutions that blend rustic charm with modern sophistication. Whether you’re looking to renovate a home or design a new commercial building, we’ve got you covered.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-white">
+            <input type="radio" name="my-accordion-3"/>
+            <div class="collapse-title text-xl font-medium lg:w-[620px] w-[375px] font-semibold text-black-b">How can I see more of Rinterio’s work?</div>
+            <div class="collapse-content">
+              <p class="font-medium lg:text-[18px] text-[16px] text-charcoal lg:w-[600px] w-[350px] text-justify">You can explore our latest portfolio by clicking the "Explore our Latest Works" button on our website. We regularly update our portfolio to showcase recent projects that highlight our design capabilities.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-white">
+            <input type="radio" name="my-accordion-3"/>
+            <div class="collapse-title text-xl font-medium lg:w-[620px] w-[375px] font-semibold text-black-b">What is the process for starting a project with Rinterio?</div>
+            <div class="collapse-content">
+              <p class="font-medium lg:text-[18px] text-[16px] text-charcoal lg:w-[600px] w-[350px] text-justify">Our process begins with an initial consultation to understand your vision. From there, we move into concept development, design, supervision, and finally, budget planning. We ensure that every step is tailored to your needs and preferences.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-white">
+            <input type="radio" name="my-accordion-3"/>
+            <div class="collapse-title text-xl font-medium lg:w-[620px] w-[375px] font-semibold text-black-b">What is Rinterio’s design philosophy?</div>
+            <div class="collapse-content">
+              <p class="font-medium lg:text-[18px] text-[16px] text-charcoal lg:w-[600px] w-[350px] text-justify">At Rinterio, we believe in creating spaces that are not only aesthetically pleasing but also functional and sustainable. We focus on using materials that blend rustic elements with modern touches, ensuring each project stands out.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-white">
+            <input type="radio" name="my-accordion-3"/>
+            <div class="collapse-title text-xl font-medium lg:w-[620px] w-[375px] font-semibold text-black-b">How can I contact Rinterio for a consultation?</div>
+            <div class="collapse-content">
+              <p class="font-medium lg:text-[18px] text-[16px] text-charcoal lg:w-[600px] w-[350px] text-justify">You can book a consultation directly through our website by clicking the "Book Consult" button or by filling out the contact form at the bottom of our homepage. We’ll be in touch shortly to discuss your project.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -271,15 +308,15 @@
           </div>
           <a class="font-extrabold text-[32px] ml-[8px] text-white cursor-pointer" href="#">Rinterio</a>
         </div>
-        <p class="font-medium text-[16px] w-[678px] text-charcoal-light text-center">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
-        <ul class="flex flex-row gap-[120px] text-lesser-white my-[48px]">
+        <p class="font-medium text-[16px] lg:w-[678px] w-[311px] text-charcoal-light text-center">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+        <ul class="flex flex-col lg:flex-row lg:gap-[120px] gap-[32px] text-lesser-white my-[16px] lg:my-[48px] items-center">
           <li><a href="#Home" class="text-[16px] font-extrabold">Home</a></li>
           <li><a href="#Services" class="text-[16px] font-normal">Services</a></li>
           <li><a href="#Portfolio" class="text-[16px] font-normal">Portfolio</a></li>
           <li><a href="#Blogs" class="text-[16px] font-normal">Blogs</a></li>
           <li><a href="#Contact-Us" class="text-[16px] font-normal">Contact Us</a></li>
         </ul>
-        <button class="bg-green text-black-light w-[211px] h-[56px] flex justify-center items-center gap-2 text-[20px] font-extrabold rounded-[32px]">Book Consult <div class="w-[32px] h-[32px] bg-black-light flex justify-center items-center rounded-2xl">
+        <button class="bg-green text-black-light w-[311px] lg:w-[211px] h-[56px] flex justify-center items-center gap-2 text-[20px] font-extrabold rounded-[32px]">Book Consult <div class="w-[32px] h-[32px] bg-black-light flex justify-center items-center rounded-2xl">
           <svg class="-rotate-[50deg] w-[15px] h-[15px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ffffff" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/></svg>
         </div></button>
       </div>
